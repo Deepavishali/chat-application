@@ -213,6 +213,7 @@ function SideDrawer() {
                                     user={user}
                                     handleFunction={() => accessChat(user._id)}
                                 />
+                            
                             ))
                         )}
                         {loadingChat && <Spinner ml="auto" display="flex" />}
