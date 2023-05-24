@@ -5,10 +5,10 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";
 import { useState } from "react";
 import axios from "axios";
-import {useToast} from "@chakra-ui/react";
-import {useNavigate} from "react-router-dom";
+import { useToast } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-export default function Login(){
+export default function Login() {
     const [show, setShow] = useState(false);
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -43,7 +43,7 @@ export default function Login(){
             };
 
             const { data } = await axios.post(
-                "http://localhost:4000/api/user/login",
+                "https://chat-application-git-main-deepavishali.vercel.app/api/user/login",
                 { email, password },
                 config
             );
@@ -72,7 +72,7 @@ export default function Login(){
         }
     };
 
-    return(
+    return (
         <VStack spacing="10px">
             <FormControl id="email" isRequired>
                 <FormLabel>Email Address</FormLabel>
@@ -119,13 +119,7 @@ export default function Login(){
             >
                 Get Guest User Credentials
             </Button>
-            <Button
-                variant="solid"
-                colorScheme="blue"
-                width="100%"
-                >
-              Forgot Password
-            </Button>
+
         </VStack>
     );
 }

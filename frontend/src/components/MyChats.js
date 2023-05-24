@@ -25,7 +25,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-        const { data } = await axios.get("http://localhost:4000/api/chat", config);
+      const { data } = await axios.get("https://chat-application-git-main-deepavishali.vercel.app/api/chat", config);
       setChats(data);
     } catch (error) {
       toast({

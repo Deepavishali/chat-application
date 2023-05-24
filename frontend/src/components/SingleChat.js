@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://chat-application-git-main-deepavishali.vercel.app/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -51,7 +51,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             setLoading(true);
 
             const { data } = await axios.get(
-                `http://localhost:4000/api/message/${selectedChat._id}`,
+                `https://chat-application-git-main-deepavishali.vercel.app/api/message/${selectedChat._id}`,
                 config
             );
             setMessages(data);
@@ -92,7 +92,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 };
                 setNewMessage("");
                 const { data } = await axios.post(
-                    "http://localhost:4000/api/message",
+                    "https://chat-application-git-main-deepavishali.vercel.app/api/message",
                     {
                         content: newMessage,
                         chatId: selectedChat,

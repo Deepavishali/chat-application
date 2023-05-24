@@ -58,7 +58,7 @@ const GroupChatModal = ({ children }) => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.get(`http://localhost:4000/api/user?search=${search}`, config);
+            const { data } = await axios.get(`https://chat-application-git-main-deepavishali.vercel.app/api/user?search=${search}`, config);
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
@@ -96,7 +96,7 @@ const GroupChatModal = ({ children }) => {
                 },
             };
             const { data } = await axios.post(
-                `http://localhost:4000/api/chat/group`,
+                `https://chat-application-git-main-deepavishali.vercel.app/api/chat/group`,
                 {
                     name: groupChatName,
                     users: JSON.stringify(selectedUsers.map((u) => u._id)),

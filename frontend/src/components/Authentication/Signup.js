@@ -98,7 +98,7 @@ export default function Signup() {
                 },
             };
             const { data } = await axios.post(
-                "http://localhost:4000/api/user",
+                "https://chat-application-git-main-deepavishali.vercel.app/api/user",
                 {
                     name,
                     email,
