@@ -42,7 +42,7 @@ export default function Login() {
                 },
             };
 
-            const { data } = await axios.post(
+            const  data  = await axios.post(
                 "https://chat-application-git-main-deepavishali.vercel.app/api/user/login",
                 { email, password },
                 config
